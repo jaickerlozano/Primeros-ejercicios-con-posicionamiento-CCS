@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header.header {
+    background-color: rgb(119, 207, 78);
+}
+
+figure.logo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+figure.logo img {
+    width: 150px;
+}
+
+nav.menu {
+    background-color: #73A345;
+    padding: 10px 20px;
+}
+
+nav.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    gap: 10px;
+}
+
+nav.menu a {
+    color: white;
+    font-size: 14px;
+}
+
+nav.menu li+li:before {
+    content: " | ";
+    color: white;
+}
+
+section.logocabecera img {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+article.bookingoption {
+    border: 3px solid black;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+article.bookingoption:first-of-type {
+    border-color: #B69C34;
+    background-color: #FDFCB7;
+}
+
+article.bookingoption:first-of-type i {
+    color: #B69C34;
+}
+
+article.bookingoption:nth-of-type(2) {
+    border-color: #6FA344;
+    background-color: #D3FFAC;
+}
+
+article.bookingoption:nth-of-type(2) i {
+    color: #6FA344;
+}
+
+article.bookingoption:nth-of-type(3) {
+    border-color: #0B346E;
+    background-color: #B8E3FF;
+}
+
+article.bookingoption:nth-of-type(3) i {
+    color: #0B346E;
+}
+
+article.bookingoption i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+article.bookingoption h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+article.bookingoption p {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+aside.review {
+    border-top: 5px solid #555555;
+    border-bottom: 5px solid #555555;
+    background-color: #CCCCCC;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+aside.review h2 {
+    font-size: 14px;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #636363;
+}
+
+aside.review article {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+aside.review header {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+aside.review i.fa-user-tie {
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+aside.review i.fa-star {
+    color: white;
+}
+
+aside.review p {
+    color: #636363;
+    font-size: 12px;
+}
