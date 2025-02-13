@@ -1,3 +1,78 @@
+/*Incorporando uso de variables aprendidas en la clase 32*/
+:root {
+    --color-first-article: #B69C34;
+    --color-second-article: #6FA344;
+    --color-third-article: #0B346E;
+}
+
+/*Incorporando animaciones con @keyframes aprendidas en la clase 34*/
+@keyframes lightingFirst {
+    0% {
+        box-shadow: 3px 3px 10px var(--color-first-article), -3px -3px 10px var(--color-first-article);
+    }
+    20% {
+        box-shadow: 6px 6px 10px var(--color-first-article), -6px -6px 10px var(--color-first-article);
+    }
+    40% {
+        box-shadow: 10px 10px 10px var(--color-first-article), -10px -10px 10px var(--color-first-article);
+    }
+    60% {
+        box-shadow: 8px 8px 10px var(--color-first-article), -8px -8px 10px var(--color-first-article);
+    }
+    80% {
+        box-shadow: 6px 6px 10px var(--color-first-article), -6px -6px 10px var(--color-first-article);
+    }
+    100% {
+        box-shadow: 3px 3px 10px var(--color-first-article), -3px -3px 10px var(--color-first-article);
+    }
+}
+
+@keyframes lightingSecond {
+    0% {
+        box-shadow: 3px 3px 10px var(--color-second-article), -3px -3px 10px var(--color-second-article);
+    }
+    20% {
+        box-shadow: 6px 6px 10px var(--color-second-article), -6px -6px 10px var(--color-second-article);
+    }
+    40% {
+        box-shadow: 10px 10px 10px var(--color-second-article), -10px -10px 10px var(--color-second-article);
+    }
+    60% {
+        box-shadow: 8px 8px 10px var(--color-second-article), -8px -8px 10px var(--color-second-article);
+    }
+    80% {
+        box-shadow: 6px 6px 10px var(--color-second-article), -6px -6px 10px var(--color-second-article);
+    }
+    100% {
+        box-shadow: 3px 3px 10px var(--color-second-article), -3px -3px 10px var(--color-second-article);
+    }
+}
+
+@keyframes lightingThird {
+    0% {
+        box-shadow: 3px 3px 10px var(--color-third-article), -3px -3px 10px var(--color-third-article);
+    }
+    20% {
+        box-shadow: 6px 6px 10px var(--color-third-article), -6px -6px 10px var(--color-third-article);
+    }
+    40% {
+        box-shadow: 10px 10px 10px var(--color-third-article), -10px -10px 10px var(--color-third-article);
+    }
+    60% {
+        box-shadow: 8px 8px 10px var(--color-third-article), -8px -8px 10px var(--color-third-article);
+    }
+    80% {
+        box-shadow: 6px 6px 10px var(--color-third-article), -6px -6px 10px var(--color-third-article);
+    }
+    100% {
+        box-shadow: 3px 3px 10px var(--color-third-article), -3px -3px 10px var(--color-third-article);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -37,11 +112,17 @@ nav.menu ul {
 nav.menu a {
     color: white;
     font-size: 14px;
+    padding: 10px 20px;
 }
 
 nav.menu li+li:before {
     content: " | ";
     color: white;
+}
+
+/*Mejora incorporada al pasar sobre la etiqueta a con el cursor*/
+nav.menu a:hover {
+    color: #2c3e1b;
 }
 
 section.logocabecera img {
@@ -57,31 +138,36 @@ article.bookingoption {
     border-bottom-right-radius: 20px;
 }
 
+/*Incorporando animation*/
 article.bookingoption:first-of-type {
-    border-color: #B69C34;
+    border-color: var(--color-first-article);
     background-color: #FDFCB7;
+    /*La animación simula una luz en el fondo del contenedor del article*/
+    animation: lightingFirst 2s linear 0s infinite;
 }
 
 article.bookingoption:first-of-type i {
-    color: #B69C34;
+    color: var(--color-first-article);
 }
 
 article.bookingoption:nth-of-type(2) {
-    border-color: #6FA344;
+    border-color: var(--color-second-article);
     background-color: #D3FFAC;
+    animation: lightingSecond 2s linear 0s infinite;
 }
 
 article.bookingoption:nth-of-type(2) i {
-    color: #6FA344;
+    color: var(--color-second-article);
 }
 
 article.bookingoption:nth-of-type(3) {
-    border-color: #0B346E;
+    border-color: var(--color-third-article);
     background-color: #B8E3FF;
+    animation: lightingThird 2s linear 0s infinite;
 }
 
 article.bookingoption:nth-of-type(3) i {
-    color: #0B346E;
+    color: var(--color-third-article);
 }
 
 article.bookingoption i {
@@ -140,4 +226,10 @@ aside.review i.fa-star {
 aside.review p {
     color: #636363;
     font-size: 12px;
+}
+
+/*Mejora incorporada*/
+/*Al posicionarnos sobre las estrellas se marcarán todas de negro*/
+aside.review div:hover i {
+    color: black;
 }
